@@ -1,0 +1,175 @@
+/* Layout styles shared by all page components */
+.pageTitle {
+  margin: 0 0 1.5rem;
+  font-size: 2.25rem;
+  line-height: 1.2;
+  color: var(--heading);
+}
+
+.intro {
+  margin: -1rem 0 1.5rem;
+  color: var(--text-muted);
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.postList {
+  display: grid;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.postTitle {
+  margin: 0 0 0.35rem;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  color: var(--heading);
+}
+
+.postTitle a:hover,
+.postTitle a:focus-visible {
+  color: var(--link);
+}
+
+.meta {
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.excerpt {
+  margin: 0 0 1rem;
+  color: var(--text);
+}
+
+.cardFooter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.readMore {
+  font-weight: 600;
+  color: var(--link);
+}
+
+.readMore:hover,
+.readMore:focus-visible {
+  text-decoration: underline;
+}
+
+.commentCount {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.backLink {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: var(--link);
+}
+
+.backLink:hover,
+.backLink:focus-visible {
+  text-decoration: underline;
+}
+
+.comments {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.commentsTitle {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+  color: var(--heading);
+}
+
+.postNav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.postNav a {
+  color: var(--link);
+  font-weight: 600;
+}
+
+.postNav a:hover,
+.postNav a:focus-visible {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .pageTitle {
+    font-size: 1.75rem;
+  }
+
+  .card {
+    padding: 1.25rem;
+  }
+
+  .postNav {
+    flex-direction: column;
+  }
+}
+
+/* API titles are all lowercase, so capitalize the first letter */
+.postTitle::first-letter,
+.excerpt::first-letter {
+  text-transform: uppercase;
+}
+
+.commentTotal {
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.pageInfo {
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.pageButton {
+  padding: 0.5rem 1.2rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--link);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.pageButton:hover:not(:disabled),
+.pageButton:focus-visible {
+  border-color: var(--link);
+}
+
+.pageButton:disabled {
+  color: var(--text-muted);
+  opacity: 0.5;
+  cursor: not-allowed;
+}

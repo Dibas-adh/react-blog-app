@@ -1,0 +1,72 @@
+/* Global styles: a reset, base typography and the theme colors.
+   Every component has its own scoped CSS Module and reads colors from
+   these variables, so switching data-theme on <html> restyles the whole app. */
+:root {
+  --bg: #f3f4f6;
+  --surface: #ffffff;
+  --text: #1f2937;
+  --text-muted: #4b5563;
+  --heading: #111827;
+  --border: #d1d5db;
+  --input-bg: #ffffff;
+  --accent: #f9a825;
+  --accent-hover: #e69500;
+  --accent-text: #ffffff;
+  --link: #2563eb;
+  --focus: #3b82f6;
+  --comment-bg: #f9fafb;
+  --header-bg: linear-gradient(90deg, #2563eb 0%, #3b2fe6 60%, #4f1fdc 100%);
+  --footer-bg: #1f2937;
+  --footer-text: #e5e7eb;
+  --shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+  --error-bg: #fef2f2;
+  --error-border: #fecaca;
+  --error-text: #b91c1c;
+  --success-text: #15803d;
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  --bg: #0b1120;
+  --surface: #1e293b;
+  --text: #e2e8f0;
+  --text-muted: #94a3b8;
+  --heading: #f8fafc;
+  --border: #334155;
+  --input-bg: #0f172a;
+  --accent: #fbbf24;
+  --accent-hover: #f59e0b;
+  --accent-text: #111827;
+  --link: #93c5fd;
+  --focus: #60a5fa;
+  --comment-bg: #0f172a;
+  --header-bg: linear-gradient(90deg, #1e1b4b 0%, #1e3a8a 60%, #312e81 100%);
+  --footer-bg: #020617;
+  --footer-text: #94a3b8;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  --error-bg: #2a1215;
+  --error-border: #7f1d1d;
+  --error-text: #fca5a5;
+  --success-text: #86efac;
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

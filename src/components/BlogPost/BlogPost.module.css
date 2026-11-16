@@ -1,0 +1,103 @@
+.title {
+  margin: 0 0 0.5rem;
+  font-size: 2rem;
+  line-height: 1.2;
+  color: var(--heading);
+}
+
+/* API titles are all lowercase, so capitalize the first letter */
+.title::first-letter {
+  text-transform: uppercase;
+}
+
+.content {
+  margin: 0 0 1rem;
+  font-size: 1.05rem;
+  color: var(--text);
+}
+
+.content::first-letter {
+  text-transform: uppercase;
+}
+
+.meta {
+  margin: 0 0 1.25rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.meta strong {
+  color: var(--heading);
+}
+
+/* "About the author" card */
+.author {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-top: 1.75rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--comment-bg);
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--accent-text);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.authorName {
+  margin: 0 0 0.3rem;
+  font-weight: 700;
+  color: var(--heading);
+}
+
+.username {
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.authorDetails {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.92rem;
+  color: var(--text);
+  word-break: break-word;
+}
+
+.authorDetails a {
+  color: var(--link);
+}
+
+.authorDetails a:hover,
+.authorDetails a:focus-visible {
+  text-decoration: underline;
+}
+
+.detailLabel {
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+}
